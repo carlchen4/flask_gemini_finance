@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Financial Statements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .upload-box {
+            padding: 15px;
+            border: 2px dashed #007bff;
+            border-radius: 8px;
+            background: #f0f8ff;
+            margin: 20px 0;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Upload Your Financial Statements</h1>
+        <p>You can upload up to <strong>10 PDF statements</strong> at a time.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="upload-box">
+                <input type="file" name="files" accept="application/pdf" multiple required>
+            </div>
+            <button type="submit">Upload & Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
